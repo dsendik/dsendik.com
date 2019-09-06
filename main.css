@@ -1,0 +1,1378 @@
+/* main.css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background-color: #222;
+}
+
+.middle {
+    position: relative;
+    display: table;
+    margin: 0 auto;
+    top: 20%;
+}
+
+.stage {
+    width: 200px;
+    height: 200px;
+    float: left;
+    transform-origin-x: 50%;
+    transform-origin-y: 50%;
+    transform-origin-z: initial;
+    transform: scale(2, 2);
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+#greet {}
+
+#intro {
+    color: whitesmoke;
+}
+
+.navbar {}
+
+.container {}
+
+#navlink {
+    color: whitesmoke;
+}
+
+
+/* Style the video: 100% width and height to cover the entire window */
+
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(3px)brightness(80%) hue-rotate(250deg);
+    -webkit-animation: filter-animation 10s infinite;
+}
+
+@-webkit-keyframes filter-animation {
+    0% {
+        -webkit-filter: hue-rotate(250deg)blur(0px)brightness(80%);
+    }
+    50% {
+        -webkit-filter: hue-rotate(330deg)blur(0px)brightness(80%);
+    }
+    100% {
+        -webkit-filter: hue-rotate(250deg)blur(0px)brightness(80%);
+    }
+}
+
+#spacer {
+    height: 120px;
+}
+
+#spacer-small {
+    height: 10px;
+}
+
+#spacerTop {
+    height: 100px;
+}
+
+#splash-buttons {
+    width: 150px;
+}
+
+.text {
+  font-weight: 100;
+  font-size: 30px;
+  color: white;
+  height: 45px;
+    width:auto;
+    overflow:hidden;    
+}
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100'
+
+    .container{
+  height 100%;
+  width 100%;
+  justify-content: center;
+  align-items: center;
+        display: flex;
+}
+.text {
+  font-weight 100;
+  font-size 35px;
+  color #white;
+}
+.dud {
+  color white;
+}
+
+/*
+This is the topmost crpyt animations, "Hey There!!"
+*/
+
+.crypt2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+}
+
+.letter2 {
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0;
+    font-family: sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 40px;
+    color: white;
+}
+
+@media (max-width: 625px) {}
+
+.letter2:before {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: white;
+    color: black;
+}
+
+.letter2:nth-child(1):before {
+    content: "3750491842";
+    margin-top: -56px;
+    animation-name: letter2;
+    animation-duration: 1.89333s;
+    animation-delay: 1.29s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter1 {
+    from {
+        margin-top: -56px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(2):before {
+    content: "3847269548275234";
+    margin-top: -216px;
+    animation-name: letter2;
+    animation-duration: 1.548s;
+    animation-delay: 1.57s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter2 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(3):before {
+    content: "0449257613";
+    margin-top: -16px;
+    animation-name: letter2;
+    animation-duration: .3s;
+    animation-delay: 1.72s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter3 {
+    from {
+        margin-top: -16px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(4):before {
+    content: "4608157593";
+    margin-top: -168px;
+    animation-name: letter2;
+    animation-duration: 2.31s;
+    animation-delay: 1.34s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter4 {
+    from {
+        margin-top: -168px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(5):before {
+    content: "602536901";
+    margin-top: -216px;
+    animation-name: letter2;
+    animation-duration: 2.628s;
+    animation-delay: 1.27s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter5 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(6):before {
+    content: "529975020";
+    margin-top: -136px;
+    animation-name: letter2;
+    animation-duration: 1.71429s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter6 {
+    from {
+        margin-top: -136px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(7):before {
+    content: "2656731904";
+    margin-top: -56px;
+    animation-name: letter2;
+    animation-duration: 2.67s;
+    animation-delay: 1.11s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter7 {
+    from {
+        margin-top: -56px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(8):before {
+    content: "585492025828";
+    margin-top: -56px;
+    animation-name: letter2;
+    animation-duration: 1.72s;
+    animation-delay: 1.14s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter8 {
+    from {
+        margin-top: -24px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(9):before {
+    content: "10594829568";
+    margin-top: -95px;
+    animation-name: letter2;
+    animation-duration: 2.56s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter9 {
+    from {
+        margin-top: -95px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(10):before {
+    content: "923447654024010";
+    margin-top: -175px;
+    animation-name: letter2;
+    animation-duration: 3.43s;
+    animation-delay: 1.02s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter10 {
+    from {
+        margin-top: -175px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(11):before {
+    content: "9523476871";
+    margin-top: -215px;
+    animation-name: letter2;
+    animation-duration: 1.8s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter11 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(12):before {
+    content: "3542180697";
+    margin-top: -216px;
+    animation-name: letter12;
+    animation-duration: 1.044s;
+    animation-delay: 1.71s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter12 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(13):before {
+    content: "6517408932";
+    margin-top: -216px;
+    animation-name: letter13;
+    animation-duration: 0.288s;
+    animation-delay: 1.92s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter13 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(14):before {
+    content: "4896537210";
+    margin-top: -48px;
+    animation-name: letter14;
+    animation-duration: 1.04s;
+    animation-delay: 1.61s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter14 {
+    from {
+        margin-top: -48px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(15):before {
+    content: "2549601783";
+    margin-top: -192px;
+    animation-name: letter15;
+    animation-duration: 1.24444s;
+    animation-delay: 1.65s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter15 {
+    from {
+        margin-top: -192px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter2:nth-child(16):before {
+    content: "4510376982";
+    margin-top: -120px;
+    animation-name: letter16;
+    animation-duration: 0.3s;
+    animation-delay: 1.91s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter16 {
+    from {
+        margin-top: -120px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+
+/*
+This is the secpmd crpyt animation, "I'm Dan Sendik,"
+*/
+
+.crypt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+}
+
+.crypt3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+}
+
+.letter {
+    width: 19px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #eee;
+}
+
+@media (max-width: 625px) {}
+
+.letter:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: white;
+    color: black;
+}
+
+.letter:nth-child(1):before {
+    content: "4613078952";
+    margin-top: -48px;
+    animation-name: letter1;
+    animation-duration: 1.89333s;
+    animation-delay: 4.29s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter1 {
+    from {
+        margin-top: -48px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(2):before {
+    content: "1283490675";
+    margin-top: -216px;
+    animation-name: letter2;
+    animation-duration: 1.548s;
+    animation-delay: 4.57s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter2 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(3):before {
+    content: "0489257613";
+    margin-top: 0px;
+    animation-name: letter3;
+    animation-duration: 0s;
+    animation-delay: 4.72s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter3 {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(4):before {
+    content: "4608157293";
+    margin-top: -168px;
+    animation-name: letter4;
+    animation-duration: 2.31s;
+    animation-delay: 4.34s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter4 {
+    from {
+        margin-top: -168px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(5):before {
+    content: "6025379481";
+    margin-top: -216px;
+    animation-name: letter5;
+    animation-duration: 2.628s;
+    animation-delay: 4.27s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter5 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(6):before {
+    content: "4298357061";
+    margin-top: -144px;
+    animation-name: letter6;
+    animation-duration: 1.71429s;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter6 {
+    from {
+        margin-top: -144px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(7):before {
+    content: "2856731904";
+    margin-top: -72px;
+    animation-name: letter7;
+    animation-duration: 2.67s;
+    animation-delay: 4.11s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter7 {
+    from {
+        margin-top: -72px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(8):before {
+    content: "1495682730";
+    margin-top: -24px;
+    animation-name: letter8;
+    animation-duration: 1.72s;
+    animation-delay: 4.14s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter8 {
+    from {
+        margin-top: -24px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(9):before {
+    content: "1872963045";
+    margin-top: -96px;
+    animation-name: letter9;
+    animation-duration: 2.56s;
+    animation-delay: 4.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter9 {
+    from {
+        margin-top: -96px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(10):before {
+    content: "6407932851";
+    margin-top: -168px;
+    animation-name: letter10;
+    animation-duration: 3.43s;
+    animation-delay: 4.02s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter10 {
+    from {
+        margin-top: -168px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(11):before {
+    content: "9523406871";
+    margin-top: -216px;
+    animation-name: letter11;
+    animation-duration: 1.8s;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter11 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(12):before {
+    content: "3542180697";
+    margin-top: -216px;
+    animation-name: letter12;
+    animation-duration: 1.044s;
+    animation-delay: 4.71s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter12 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(13):before {
+    content: "6517408932";
+    margin-top: -216px;
+    animation-name: letter13;
+    animation-duration: 0.288s;
+    animation-delay: 4.92s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter13 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(14):before {
+    content: "4896537210";
+    margin-top: -48px;
+    animation-name: letter14;
+    animation-duration: 1.04s;
+    animation-delay: 4.61s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter14 {
+    from {
+        margin-top: -48px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(15):before {
+    content: "2549601783";
+    margin-top: -192px;
+    animation-name: letter15;
+    animation-duration: 1.24444s;
+    animation-delay: 4.65s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter15 {
+    from {
+        margin-top: -192px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter:nth-child(16):before {
+    content: "4510376982";
+    margin-top: -120px;
+    animation-name: letter16;
+    animation-duration: 0.3s;
+    animation-delay: 1.91s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter16 {
+    from {
+        margin-top: -120px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+
+/*
+This is the third crpyt animation, "I make software"
+*/
+
+.crypt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+}
+
+.crypt3 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 90%;
+    font-size: 0;
+    transform: translate(-50%);
+}
+
+.letter3 {
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    overflow: hidden;
+    margin: 0 0;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    color: #eee;
+}
+
+@media (max-width: 625px) {}
+
+.letter3:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    word-break: break-all;
+    background-color: white;
+    color: black;
+}
+
+.letter3:nth-child(1):before {
+    content: "4613078952";
+    margin-top: -48px;
+    animation-name: letter1;
+    animation-duration: 1.89333s;
+    animation-delay: 7.29s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter1 {
+    from {
+        margin-top: -48px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(2):before {
+    content: "1283490675";
+    margin-top: -216px;
+    animation-name: letter2;
+    animation-duration: 1.548s;
+    animation-delay: 7.57s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter2 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(3):before {
+    content: "0489257613";
+    margin-top: 0px;
+    animation-name: letter3;
+    animation-duration: 0s;
+    animation-delay: 7.72s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter3 {
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(4):before {
+    content: "4608157293";
+    margin-top: -168px;
+    animation-name: letter4;
+    animation-duration: 2.31s;
+    animation-delay: 7.34s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter4 {
+    from {
+        margin-top: -168px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(5):before {
+    content: "6025379481";
+    margin-top: -216px;
+    animation-name: letter5;
+    animation-duration: 2.628s;
+    animation-delay: 7.27s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter5 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(6):before {
+    content: "4298357061";
+    margin-top: -144px;
+    animation-name: letter6;
+    animation-duration: 1.71429s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter6 {
+    from {
+        margin-top: -144px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(7):before {
+    content: "2856731904";
+    margin-top: -72px;
+    animation-name: letter7;
+    animation-duration: 2.67s;
+    animation-delay: 7.11s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter7 {
+    from {
+        margin-top: -72px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(8):before {
+    content: "1495682730";
+    margin-top: -24px;
+    animation-name: letter8;
+    animation-duration: 1.72s;
+    animation-delay: 7.14s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter8 {
+    from {
+        margin-top: -24px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(9):before {
+    content: "1872963045";
+    margin-top: -96px;
+    animation-name: letter9;
+    animation-duration: 2.56s;
+    animation-delay: 7.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter9 {
+    from {
+        margin-top: -96px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(10):before {
+    content: "6407932851";
+    margin-top: -168px;
+    animation-name: letter10;
+    animation-duration: 3.43s;
+    animation-delay: 7.02s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter10 {
+    from {
+        margin-top: -168px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(11):before {
+    content: "9523406871";
+    margin-top: -216px;
+    animation-name: letter11;
+    animation-duration: 1.8s;
+    animation-delay: 7.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter11 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(12):before {
+    content: "3542180697";
+    margin-top: -216px;
+    animation-name: letter12;
+    animation-duration: 1.044s;
+    animation-delay: 7.71s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter12 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(13):before {
+    content: "6517408932";
+    margin-top: -216px;
+    animation-name: letter13;
+    animation-duration: 0.288s;
+    animation-delay: 7.92s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter13 {
+    from {
+        margin-top: -216px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(14):before {
+    content: "4896537210";
+    margin-top: -48px;
+    animation-name: letter14;
+    animation-duration: 1.04s;
+    animation-delay: 7.61s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter14 {
+    from {
+        margin-top: -48px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(15):before {
+    content: "2549601783";
+    margin-top: -192px;
+    animation-name: letter15;
+    animation-duration: 1.24444s;
+    animation-delay: 7.65s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter15 {
+    from {
+        margin-top: -192px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(16):before {
+    content: "4510376982";
+    margin-top: -120px;
+    animation-name: letter16;
+    animation-duration: 0.3s;
+    animation-delay: 7.91s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter16 {
+    from {
+        margin-top: -120px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+.letter3:nth-child(17):before {
+    content: "4510376982";
+    margin-top: -120px;
+    animation-name: letter17;
+    animation-duration: 0.3s;
+    animation-delay: 8.91s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes letter17 {
+    from {
+        margin-top: -120px;
+    }
+    to {
+        margin-top: 24px;
+    }
+}
+
+#scroll-animate
+{
+  overflow: hidden;
+}
+
+#scroll-animate-main
+{
+  width: 100%;
+  left: 0;
+  position: fixed;
+}
+
+#heightPage,
+#heightScroll
+{
+  width: 10px;
+  top: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+#heightPage
+{
+  left: 0;
+}
+
+#heightScroll
+{
+  right: 0;
+}
+
+
+
+
+.wrapper-parallax {
+  margin-top: 100%;
+  margin-bottom: 300px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 150px;
+  color: #fff;
+}
+
+header h1{}
+
+.content h1{
+  line-height: 1000px;
+  color: #999;
+}
+
+footer h1
+{
+  line-height: 300px;
+}
+
+header,
+footer,
+#scroll-animate-main
+{
+  -webkit-transition-property: all;
+     -moz-transition-property: all;
+      transition-property: all;
+
+  -webkit-transition-duration: 0.4s;
+     -moz-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+
+  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
+      transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+/* Header Parallax Element Style*/ 
+.paral {
+margin-top: 400px;
+min-height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+    -webkit-backface-visibility: hidden;
+
+
+}
+
+/* Image for Parallax Section */ 
+.paralsec {
+background-image: url("resources/cu_2.jpg");
+    
+}
+#paralsec1 {
+}
+.paralsec1 {
+background-image: url("resources/c_bg.jpg");
+}
+ 
+.paralsec2 {
+background-image: url("https://img.webnots.com/2015/11/parallax2.jpg");
+}
+ 
+/* Paragraph for Parallax Section */ 
+.paral p {
+font-size: 24px;
+color:#f5f5f5;
+text-align: center;
+line-height: 60px;
+}
+ 
+/* Heading for Parallax Section */ 
+.paral h1 {
+color: rgba(255, 255, 255, 0.8);
+font-size: 60px;
+text-align: center;
+padding-top: 60px;
+line-height: 100px;
+}
+
+/* Header Parallax Element Style*/ 
+.paral {
+min-height: 600px;
+background-attachment: fixed;
+background-size: cover;
+background-position: 50% 50%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.fa.fa-angle-double-down {
+    color: white;
+    position:static;
+    margin-top: 15%;
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+
+
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 1.5s;
+    animation-iteration-count:infinite;
+
+}
+@keyframes example {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(10px);}
+    100% {transform: translateY(0px);}
+}
+
+#downarrow2 {
+    color: white;
+    font-size: 40px;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    text-align: center;
+
+      -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 1.5s;
+    animation-iteration-count:infinite;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+#projects{
+    padding-left: 20%;
+text-align: center;
+    vertical-align: text-bottom; 
+}
+
+@media screen and (max-width: 600px) {
+#projects{
+    padding-left: 0%;
+text-align: center;
+    vertical-align: text-bottom; 
+}
+}
+
+@media screen and (max-width: 800px) {
+#projects{
+    padding-left: 0%;
+text-align: center;
+    vertical-align: text-bottom; 
+}
+}

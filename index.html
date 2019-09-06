@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="main.css" />
+    <title>Greetings!</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+
+    </head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <script>
+        // Add smooth scrolling on all links inside the navbar
+        $("#myNavbar a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store hash
+                var hash = this.hash;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    </script>
+    
+    
+    
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="min2.mp4" type="video/mp4"> </video>
+    
+    
+    
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" id="navlink"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#" id="navlink"> <span class="sr-only">(current)</span> </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="navlink"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="navlink"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/meditate" id="navlink"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="my-5" id="spacerTop"></div>
+                <div class="container">
+  <div class="text"></div>
+                    <div id="output"></div>
+<!-- Load Babel -->
+<!-- v6 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<!-- Your custom script here -->
+<script type="text/babel">
+"use strict";
+
+function _instanceof(left, right) { if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) { return !!right[Symbol.hasInstance](left); } else { return left instanceof right; } }
+
+function _classCallCheck(instance, Constructor) { if (!_instanceof(instance, Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+// ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+var TextScramble =
+/*#__PURE__*/
+function () {
+  function TextScramble(el) {
+    _classCallCheck(this, TextScramble);
+
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+    this.update = this.update.bind(this);
+  }
+
+  _createClass(TextScramble, [{
+    key: "setText",
+    value: function setText(newText) {
+      var _this = this;
+
+      var oldText = this.el.innerText;
+      var length = Math.max(oldText.length, newText.length);
+      var promise = new Promise(function (resolve) {
+        return _this.resolve = resolve;
+      });
+      this.queue = [];
+
+      for (var i = 0; i < length; i++) {
+        var from = oldText[i] || '';
+        var to = newText[i] || '';
+        var start = Math.floor(Math.random() * 40);
+        var end = start + Math.floor(Math.random() * 40);
+        this.queue.push({
+          from: from,
+          to: to,
+          start: start,
+          end: end
+        });
+      }
+
+      cancelAnimationFrame(this.frameRequest);
+      this.frame = 0;
+      this.update();
+      return promise;
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      var output = '';
+      var complete = 0;
+
+      for (var i = 0, n = this.queue.length; i < n; i++) {
+        var _this$queue$i = this.queue[i],
+            from = _this$queue$i.from,
+            to = _this$queue$i.to,
+            start = _this$queue$i.start,
+            end = _this$queue$i.end,
+            char = _this$queue$i.char;
+
+        if (this.frame >= end) {
+          complete++;
+          output += to;
+        } else if (this.frame >= start) {
+          if (!char || Math.random() < 0.28) {
+            char = this.randomChar();
+            this.queue[i].char = char;
+          }
+
+          output += "<span class=\"dud\">".concat(char, "</span>");
+        } else {
+          output += from;
+        }
+      }
+
+      this.el.innerHTML = output;
+
+      if (complete === this.queue.length) {
+        this.resolve();
+      } else {
+        this.frameRequest = requestAnimationFrame(this.update);
+        this.frame++;
+      }
+    }
+  }, {
+    key: "randomChar",
+    value: function randomChar() {
+      return this.chars[Math.floor(Math.random() * this.chars.length)];
+    }
+  }]);
+
+  return TextScramble;
+}(); // ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+
+var phrases = ['Hello There,', 'My name is Dan Sendik,', 'I\'m a software developer.'];
+var el = document.querySelector('.text');
+var fx = new TextScramble(el);
+var counter = 0;
+
+var next = function next() {
+  fx.setText(phrases[counter]).then(function () {
+    setTimeout(next, 2000);
+  });
+  counter = (counter + 1) % phrases.length;
+};
+
+next();
+</script>
+                                        <div id="spacerTop"></div>
+
+</div>
+                
+<!--
+                <div class="crypt2">
+                    <div class="letters"> <span class="letter2">H</span> <span class="letter2">e</span><span class="letter2">y</span><span class="letter2"> </span><span class="letter2">T</span><span class="letter2">h</span><span class="letter2">e</span><span class="letter2">r</span><span class="letter2">e</span><span class="letter2">!</span><span class="letter2">!</span></div>
+                </div>
+                <div class="my-5" id="spacer"></div>
+                <div id="intro">
+                    <div class="crypt">
+                        <div class="letters"> <span class="letter">I</span> <span class="letter">'</span><span class="letter">m</span><span class="letter"> </span><span class="letter">D</span><span class="letter">a</span><span class="letter">n</span><span class="letter"> </span><span class="letter">S</span><span class="letter">e</span><span class="letter">n</span><span class="letter">d</span><span class="letter">i</span><span class="letter">k</span> <span class="letter">,</span></div>
+                    </div>
+                    <div class="crypt3">
+                        <div class="letters"> <span class="letter3">I</span> <span class="letter3"> </span><span class="letter3">m</span><span class="letter3">a</span><span class="letter3">k</span><span class="letter3">e</span><span class="letter3"> </span><span class="letter3">S</span><span class="letter3">o</span><span class="letter3">f</span><span class="letter3">t</span><span class="letter3">w</span><span class="letter3">a</span><span class="letter3">r</span> <span class="letter3">e</span> <span class="letter3">.</span></div>
+                    </div>
+-->
+                    <a href="dsendikCV.pdf">
+                        <button type="button" class="btn btn-outline-light" id="splash-buttons">Resume</button>
+                    </a>
+                    <div id="spacer-small"></div>
+                    <a href="relaxify/meditate.html">
+                        <button type="button" class="btn btn-outline-light" id="splash-buttons">Relax</button>
+                        
+                    </a>
+                        
+
+<div>
+                    <h1 id="downarrow"><a href="#section1"></h1><i class="fa fa-angle-double-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- First Parallax Section -->
+<div class="jumbotron paral paralsec" id="section1"><a name="section1"></a>
+<h1 class="display-3"></h1>                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+<div id="bg_image"></div>
+<p class="lead">I'm an aspiring software developer from Columbia University. When I'm not feverishly coding the next big idea, I'm lifting heavy things in the gym, kayaking, or watching a Sci-fi movie.</p>
+<p class="lead">
+<!--<a class="btn btn-outline-light" href="#" role="button">Here is a button 1</a>-->
+</p>                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+                    <div id="spacer-small"></div>
+
+
+
+
+
+          <div>
+                    <p id="downarrow"><a href="#section2"></p><i id="downarrow2" class="fa fa-angle-double-down"></i></a>
+                </div>  
+</div>
+
+ <div>               
+<!-- Second Parallax Section -->
+<div class="jumbotron paral paralsec1"><a name="section2"></a>
+<h1 class="display-3" ></h1>
+<p class="lead">Some of my projects:</p>
+<p class="lead">
+    
+    <div class="row" id="projects"> 
+  <div class="column">
+    <img src="resources/cm.png">
+    <img src="resources/sudokunator.png">
+
+  </div>
+  <div class="column">
+    <img src="resources/storytime.png">
+    <img src="resources/gtdb.png">
+
+
+  </div> 
+  <div class="column">
+    <img src="resources/unicorn.png">
+    <img src="resources/relaxify.png">
+
+  </div>
+<!--
+  <div class="column">
+    <img src="underwater.jpg">
+    <img src="ocean.jpg">
+    <img src="wedding.jpg">
+    <img src="mountainskies.jpg">
+    <img src="rocks.jpg">
+    <img src="underwater.jpg">
+  </div>
+-->
+</div>
+    
+<!--<a class="btn btn-outline-light" href="widgets.html" role="button">Here is a button 2</a>-->
+</p>
+    
+
+
+          <div>
+                    <h1 id="downarrow"><a href="#section3"></h1><i id="downarrow2" class="fa fa-angle-double-down"></i></a>
+                </div> 
+</div>
+ 
+<!-- Third Parallax Section -->
+<div class="jumbotron paral paralsec2"><a name="section3"></a>
+<h1 class="display-3">Contact Me</h1>
+<!--<p class="lead">dan.s@columbia.edu</p>-->
+<p class="lead">
+<a href = "https://mail.google.com/mail/?view=cm&fs=1&to=dan.s@columbia.edu" class="btn btn-outline-light" href="dan.s@columbia.edu" role="button">Send me email</a>
+</p>          <div>
+                    <h1 id="downarrow"><a href="#"></h1><i id="downarrow2" class="fa fa-angle-double-up"></i></a>
+                </div> 
+</div>
+ 
+<!-- Add More Parallax Sections Here -->    
+        
+        
+        
+        <script></script>
+        
+            <div class="containter">
+                <div class="col-lg-12 text-center">
+                    <div id="spacer-small"></div>
+                    </a>
+                    <h1 id="resume"><a name="resume"></h1></a>
+                    <!-- Bootstrap core JavaScript -->
+                    <script src="vendor/jquery/jquery.slim.min.js"></script>
+                <script>var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}</script>
+</body>
+
+</html>
